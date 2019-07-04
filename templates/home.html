@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css1.css'%}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Encrypt Fund</title>
+    <style>
+        nav{
+            
+            background-color:#191970 ;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 62px;
+    text-align: center;
+    padding-top: 9px;
+        }
+
+          footer{
+
+            display: block;
+            padding: 8px 18px;
+            margin: 0;
+              bottom:0;
+            left:0;
+            width:100%;
+            height: 440px;
+
+        }
+
+        #content1{
+
+            font-family: "Roboto", "Lucida Grande", Arial, sans-serif;
+           font-size: 220%;
+            color:white;
+            text-align: center;
+            margin-left: 5%;
+
+        }
+
+        #bd{
+
+            background-color: #191970;
+            background-size:100%;
+            color:white;
+
+            /*background-image:url('/static/ai.png');*/
+
+        }
+
+        #Logo, #img1, #img2,#img3, #img4{
+
+          height: 200px;
+          width:20%;
+          margin-left: 8%;
+          text-align: center;
+          font-size: 300%;
+          color:white;
+
+        }
+
+        a{
+
+            text-decoration: none;
+            cursor: pointer;
+            color:white;
+            font-size: 130%;
+
+        }
+
+    ::placeholder {
+        font-size:21px;
+        opacity: 2; 
+}
+       /* #section1{
+
+            height: 400px;
+        }*/
+        #section2, #section3, #section4, #section5, #section7{
+
+            height: fit-content;
+            padding:5px 15px;
+            color:black
+        }
+
+         #container{
+        width: 30%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+
+}
+
+        #second{
+
+        width: 30%;
+        height: 400px;
+        margin: 0;
+        padding: 0;
+
+}
+
+        #b1, #b2, #b3, #b4 {
+
+          transition: transform .2s; /* Animation */
+
+}
+
+        #whp, #hw {
+
+        background-color: #3366ff;
+        transition: transform .2s; /* Animation */
+
+}
+
+::before {
+
+    box-sizing: border-box;
+
+}
+    .roadmap-date:before {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    display: block;
+    border: 3px solid #FF0348;
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #281E3D;
+
+}
+
+    .row {
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
+
+    .col-12 {
+
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+}
+
+ /* --// 20181024 //-- */
+
+.timeline-list > div.row {
+
+    margin-bottom: 75px;
+}
+
+
+
+.timeline-list > div.row:nth-child(odd) > .col-md-5 {
+
+    text-align: right;
+
+}
+
+.timeline-content {
+
+    padding: 20px 30px;
+    background-color: #2F2743;
+    border-radius: 27px;
+    display: inline-block;
+    min-width: 350px;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.2);
+
+}
+
+
+
+.timeline-content .content-title {
+
+    font-size: 1.875rem;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+
+
+.timeline-content .content {
+
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    line-height: 2.5;
+
+}
+
+.roadmap-date {
+
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    transform: translate(0, -50%);
+    color: #FF0348;
+    font-size: 1.25rem;
+    padding-left: 70px;
+
+}
+
+.roadmap-date.left {
+
+    top: 50%;
+    left: auto;
+    right: -11px;
+    padding-left: 0;
+    padding-right: 70px;
+    margin-left: 0;
+
+}
+
+.roadmap-date:before {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    display: block;
+    border: 3px solid #FF0348;
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #281E3D
+
+}
+
+
+
+.roadmap-date.left:before {
+
+    left: auto;
+    right: 0;
+
+}
+
+.timeline-content:after {
+
+    position: absolute;
+    content: "Ã¯â‚¬Å’";
+    left: -24px;
+    top: 2px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+    color: #e5253c;
+    opacity: 0;
+
+}
+
+.timeline-content-left:before, .timeline-content-left:after {
+
+    right: -25px;
+    left: auto;
+
+}
+
+.timeline-content.active:before {
+
+    background: #000537;
+
+}
+
+.timeline-content.active:after {
+
+    opacity: 1;
+    color: #fff;
+
+}
+
+.timeline-content h6 {
+
+    margin-bottom: 8px;
+    color: #e5253c;
+    font-size: 19px;
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .timeline-list:before {
+
+        left: 5px;
+}
+    .timeline-content {
+
+        padding: 0 30px;
+        margin: 15px 0;
+
+    }
+
+    .timeline-content:before {
+
+        top: 0;
+        left: -5px;
+
+
+
+    }
+
+
+
+    .timeline-content:after {
+
+        left: -15px;
+        top: 0;
+    }
+    .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    }
+
+    .fa:hover {
+    opacity: 0.7;
+}
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    }
+
+
+
+    .timeline-content-left:before, .timeline-content-left:after {
+
+        right: auto;
+        left: -5px;
+
+    }
+
+
+
+    .main-chart-wrap .img-chart {
+
+        width: 100%;
+        margin-left: 0;
+
+    }
+
+
+
+    .token-economy-img {
+
+        max-width: 120%;
+        max-height: 120%;
+        width: 100%;
+        margin-top: -8%;
+        margin-left: 0;
+
+    }
+
+
+
+    .img-iphone-wrap > img {
+
+        margin-top: -35px;
+        width: 60%;
+
+    }
+
+}
+
+.team-circle-des {
+
+    background: #08157a;
+    border-radius: 8px;
+    padding: 30px 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    transition: all 0.3s;
+
+}
+
+.team-circle-des:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.team-circle-des h5 {
+
+    font-weight: 400;
+    margin: 21px 0 1px;
+
+}
+
+.team-circle-des span {
+
+    display: block;
+    margin-bottom: 6px;
+    color: #e5253c;
+
+}
+
+.team-circle-des p {
+
+    font-size: 0.87em;
+    color: #e5253c;
+
+}
+
+.team-circle-img {
+
+    max-width: 160px;
+    margin: 0 auto;
+
+}
+
+.team-circle-img img {
+
+    border-radius: 50%;
+
+}
+
+.team-circle-social li {
+
+    display: inline-block;
+    margin: 0 8px;
+
+}
+
+.team-circle-social li a {
+
+    color: #e5253c;
+
+}
+
+/*.team-circle-social li a:hover {
+
+    color: #e5253c;
+
+}*/
+
+@media only screen and (max-width: 767px) {
+
+    .team-circle-des {
+
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .team-circle-des img {
+
+        max-width: 100%;
+
+    }
+
+}
+
+    .timeline-list:before{
+
+    position: absolute;
+    height: 97%;
+    width: 2px;
+    left: 50%;
+    top: 2%;
+    content: "";
+    background: linear-gradient(rgba(113, 2, 33, 0.25), #e5253c, rgba(113, 2, 33, 0.25));
+    }
+
+    h3{
+
+        color :white;
+    }
+
+</style>
+
+</head>
+
+<body id="bd">
+
+<nav>
+    <a id="meanu" href=" " style="font-size: 25px;color:white;cursor:pointer;"><b><u> Encrypt Fund</u></b></a>
+    <a id="menu1" href="#section1" style="margin-left: 20%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px">About us </a>
+    <a  id="menu2" href="#section2" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px"> Why Index Investing</a>
+    <a id="menu3"  href="#section4" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px">Token Holder Benefits</a>
+    <a id="menu4"  href="#section5" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px"> Token sale</a>
+    <a id="menu5" href="#section7" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px"> Road map</a>
+     <a id="menu6" href="#section9" style="margin-left: 2%;text-decoration:none;cursor:pointer;border-radius:8px 8px"> Team</a>
+
+</nav>
+
+<section id="section1" style="background-image: url('/static/encrypt.jpg');background-repeat: no-repeat;background-size: 1600px 1200px;"><br><br><br><br><br><br><br><br><br><br><br>
+    <p id="content1"><br>
+
+   <b> Encrypt is a Pioneer Tokenized Cryptocurrency Index Fund Of The<br> Top Best Performing Cryptocurrencies and Token Based DApps
+   </b><br><br></p>
+            
+    <p style="text-align: center;font-size: 110%;">Outperform the market by holding the top crypto coins with a single token - NIX<br><br><br>
+    <a href="#" id="whp" style="text-decoration: none;cursor:pointer;padding:15px 15px;border-radius:8px 8px;color:white;">Whitepaper</a> <a href="#" id="hw" style="text-decoration: none;cursor:pointer;color:white;border-radius:8px 8px;padding:15px 15px;margin-left: 5%;">How it works?</a></p>
+
+<br><br><br><br><br><br><br><br>
+</section>
+
+<section id="section2" class="m-bg-white section-theme">
+<div class="container"><div class="row align-items-center"><div class="col-lg-6 img-container"><img src="/static/images/w2.jpeg" alt="Index Investing" ><br></div> <div class="col-lg-6"><div class="section-text-content"><br><br><br><h2><b>Why Index Investing?</h2></b><div class="md-body-text margin-top"><p>
+        
+        In traditional financial markets, an index is comprised of a portfolio of assets which represents the statistical change of the measured market.An index can be derived from a number of parameters such as price, marketcap, and past performance. Examples of well-know stock indexes include Standard & Poor's 500 Index (S &P500). Although cryptocurrencies and digital assetsare relatively new asset classes, the industry acknowledges the need for crypto protfolio management products and solutions. Within just the past few years, there has been rapid growth.of crypto index fund offerings. 
+        <br><br>
+        Crypto index funds provide exposure to an extremely new and volatile asset  class while also spreading that risk across. a protfolio of different
+        cryptocurrencies.This becomes particularly attractive to traditional investors, who are generally put off and discouraged from the comparatively risky crypto markets.As a result, we're seeing a huge influx of crypto index products being created.
+    <!-- </span><a id="less" onclick="bye()" style="display: none;margin-left:45%;margin-right:45%;cursor:pointer;padding:15px 15px;border-radius:8px 8px;">less </a>
+ -->
+    </p></div></div></div></div></div></div><br><br>
+</section><br><br><br><br>
+
+<section id="section3"><br><br>
+    <h3 style="color:white;text-align:center;">Introducing NIX</h3><br><br>
+    <div style="color:white;text-align:center;font-size: 120%;margin-left: 8%;margin-right: 8%; ">NIX token tracks the weighted average of 100 major cryptocurrencies based on their capitalization  and The token focuses on exposure to a diversified portfolio including cryptocurrencies and tokens.</p>
+    </div></section><br><br>
+
+
+<section id="section4"><br><br><br>
+    <h2 style="color:white;text-align: center;">Token Holder Benefits</h2><br>
+<br><br>
+    <div style="color:white;text-align:center;margin-left: 2%;margin-right: 2%;">
+
+
+<div class="container">
+  <div class="row" style="margin-top: -56px;">
+    <div class="col-sm-6" style="left: -35px;"><img style="margin-top: 28px;" src="/static/diversification.png"></div>
+    <div class="col-sm-6"><img style="margin-top: 28px;" src="/static/market exposure.png"></div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: -33px;">
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-sm-6" id="b1" style="left: -35px;"><br>
+            <h2 style="color:white;text-align:center;">Diversification</h2><br>
+                <p style="color:white;">
+                    NIX Fund ensures abroad portfolio of individual assets and can help lessen the risk that comes with investing in a single cryptocurrency.
+                </p>
+            </div>
+    <div class="col-sm-6" id="b2"><br>
+    <h2 style="color:white;text-align: center;">Market Exposure</h2><br>
+    <p style="color:white;">NIX is aim to deliver the performance of the crypto currency market.</p>
+</div>
+  </div>
+</div>
+
+
+<div class="container" style="margin-top: 20px;" >
+  <div class="row">
+    <div class="col-sm-6" style="left: -35px;"><img style="margin-top: 28px;" src="/static/transparency.png"></div>
+    <div class="col-sm-6"><img style="margin-top: 28px;" src="/static/accountability .png"></div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: -33px;">
+  <div class="row" style="margin-top: 20px;" >
+    <div class="col-sm-6" id="b3" style="left: -35px;"><br>
+    <h2 style="color:white;text-align: center;">Transparency</h2><br>
+    <p style="color:white;">All Encrypt Index Fund transactions and balances are recorded on public blockchains and thus, by nature are immutable, transparent and fully auditable.</p></div>
+
+    <div class="col-sm-6" id="b4"><br>
+            <h2 style="color:white;text-align: center;">Accountability</h2><br>
+                <ul style="color:white;text-align: left">
+                    <li>Publish Rebalance reports weekly or monthly.</li>
+                    <li>Trading Reports</li>
+                    <li>Publish NAV Quaterly</li>
+                    <li>Annual Reports</li>
+                </ul>
+            </div>
+</div>
+  </div>
+</div>
+</div>
+
+    </div>
+</section><br>
+
+<section id="section5" class="m-bg-white section-theme"><br><br><br><br>
+    <div class="container"><div class="section-text-content"><br><br><br><center><h2><b>Token Sale</b></h2></center><br><div class="md-body-text margin-top">
+        <p style="color: black;margin-left: 2%;font-size: 120%;">
+            NIX Token is a dynamic crypto product which tracks the performance of the top cryptocurrencies.
+            The NIX token is an ERC-20 token that will eventually be traded on listed cryptocurrency exchange platforms. The basket ensures that your funds are not subject to fluctuatios in one single currency.It gives you transparent 24*7 tracking and liquidity.
+            <br><br>
+            <h3 style="color:black;margin-left: 2%;"><b>Details</b></h3><br>
+            <p style="color: black;margin-left: 2%;font-size: 120%;">
+            Token Symbol - NIX<br>
+            Token Standard - ERC 20 Complient Token<br>
+            Total Supply of tokens NIX - 3,50,00,000<br>
+            Total Allocated tokens for crowdfunding - 2,27,50,000 (65% of Total Supply)
+            </p>
+            <br></p>
+
+    <center><h4 style="color:black;text-align:center"> Token distribution and fund allocations </h4></center><br><br>
+    <img src="{%  static 'images/15.JPG' %} " style="margin-left: 8%">
+    <img src="{%  static 'images/16.JPG' %} " style="margin-left:8%"></div><br><br>
+
+</section><br>
+
+<section id="section6" class="m-bg-light section-theme"><div class="container section-text-content"><h2 class="text-center" style="color: black ">
+     <b> Partners</b>
+    </h2> <div class="row mt-55"><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1><!-- <img src="#" alt="#" class="partner-icon" data-v-64307df1> --></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">Asian Decentralized</h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1 style="color: black">
+        <b>The New Era of Blockchain Revolution</b><br> Drawing thousands of the world's blockchain leaders together to learn and do business,Through conversations between different countries’ industries, capitalists, startups, and governments,  Asian Decentralzed brings you deep discussions and analysis, leading people to understand the ongoing blockchain revolution in the world
+      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1><!-- <img src="#" alt="#" class="partner-icon" data-v-64307df1> --></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">ABC</h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1>
+        Asian Blockchain Council connects global blockchain experts ,tech players in the space including emerging startups - with regional businesses , govt authorities , IT leaders , tech entrepreneurs , investors and blockchain developers<br><br> It features enterprise use cases , govt use cases , keynotes , panel discussions , tech- talks , exhibitions , pitches and opportunities
+      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1><!-- <img src="#" alt="#" class="partner-icon" data-v-64307df1> --></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">Tokenization Expo </h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1>
+        TokenizationExpo Empowers  the  world Tokenized industry provides a platform  to the angel investors and Venture capitalists  Access to invest in early  Regulated Security Token offerings  and  Blockchain startups   Join With the Next Biggest Tokenized Revolution 
+      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div></div></div></section>  
+
+<section id="section7"><br><br><br><br>
+    <div class="container" >
+        <div class="row">
+            <div class="col-12">
+
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h1 class="section-basic-title mb-90" style="color:white;">Road Map</h1>
+                        <br>
+                    </div>
+                </div>
+                <div class="timeline-list">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="timeline-content" >
+                                <p class="content">Intial reasearch and development of Project<br></p>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
+                            <span class="roadmap-date"> Aug 2018</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1 position-relative">
+                            <span class="roadmap-date left">Nov 2018 </span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="timeline-content">
+                                <p class="content">Started Development of Blockchain Smart Contract<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="timeline-content" >
+                                <p class="content">Design index methodology and development of whitepaper</p>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
+                            <span class="roadmap-date">Jan 2019</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1 position-relative">
+                            <span class="roadmap-date left">March 2019 </span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="timeline-content">
+                                <p class="content">Publish of Portfolio Crypto Currency List<br>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="timeline-content" >
+                                <p class="content">Launch Token Through IEO Launchpad</p>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
+                            <span class="roadmap-date">May 2019</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span class="roadmap-date left"> Oct 2019 </span>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="timeline-content">
+                                <p class="content">Invest in underlaying Portfolio Crypto Currencies List<br>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="timeline-content" >
+                                <p class="content"> First Re-balancing of Portfolio assets</p>
+                            </div>
+                        </div>
+                         <div class="col-md-5 ">
+                            <span class="roadmap-date ">Nov 2019</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1 position-relative">
+                            <span class="roadmap-date left"> Jan 2020 </span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="timeline-content">
+                                <p class="content">Launch of trading Software with integrated of AI.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="timeline-content" >
+                                <p class="content">Listing NIX token into Multiple Crypto Currency exchanges</p>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
+                            <span class="roadmap-date">TBC</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1 position-relative">
+                            <span class="roadmap-date left">TBC </span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="timeline-content">
+                                <p class="content">Publish First annum NAV report
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="timeline-content" >
+                                <p class="content">Buy Back of tokens through withdraw from Token Holders</p>
+                            </div>
+                        </div>
+                         <div class="col-md-5">
+                            <span class="roadmap-date">TBC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><br><br>
+<section id="section8"><br><br><br>
+
+    <h3 style="text-align: center;color:white"><marquee><i>Message by encrypt</i></h3></marquee><p style="font-size:75%;text-align: center;color:white;"><br><br><br>
+        <b>"Cryptocurrency based indices are enable investors to monitor the state of cryptomarket with no need to study each cryptocurrency <br> separately.
+     Cryptocurrency indices are based on market capitalization and are recalculated once a day, a week, a month or a quarter "</b><br><br>
+     <medium style="font-size:80%;float: right;margin-right:10%; "> - Mallikarjuna Naidu, Founder & CEO Encrypt Fund</medium></p><br><br><br>
+
+<section id="section9">
+    <section class="m-bg-lightest section-utils"><div class="container"><h2 class="text-center"><b>Team</b></h2>
+     <div class="row mt-10"><div class="col-lg-6 col-sm-12 padding-vertical-15"><div class="card" data-v-a9db5614><div class="card-body mn--card-body" data-v-a9db5614><img src="/static/images/ceo.jpeg" alt="Malikarjuna Naidu" class="team-card-image rounded-circle" data-v-a9db5614> <h3 class="profile-name" data-v-a9db5614>
+      Malikarjuna Naidu
+    </h3> <h3 class="profile-designation" data-v-a9db5614>
+      Founder & CEO </h3>
+     <div class="team-social-icons mt-auto" data-v-a9db5614>
+    <a href="https://twitter.com/mnaidu117" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/02d6313377eee0e8a3686f8d2f457d0b.svg" class="team-social-svg-icon" data-v-a9db5614></a> <!---->
+    <a href="https://www.linkedin.com/in/malikarjuna-naidu/" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/93ca551c66041878254331edba629763.svg" class="team-social-svg-icon" data-v-a9db5614></a></a></div></div></div></div>
+    <div class="col-lg-6 col-sm-12 padding-vertical-15"><div class="card" data-v-a9db5614><div class="card-body mn--card-body" data-v-a9db5614><img src="/static/images/md.jpeg" alt="Ravi Kumar " class="team-card-image rounded-circle" data-v-a9db5614> <h3 class="profile-name" data-v-a9db5614>
+    Ravi Kumar
+    </h3> <h3 class="profile-designation" data-v-a9db5614>
+      Managing Director
+    </h3> <div class="team-social-icons mt-auto" data-v-a9db5614>
+    <a href="#" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/02d6313377eee0e8a3686f8d2f457d0b.svg" class="team-social-svg-icon" data-v-a9db5614></a> <!---->
+    <a href="https://www.linkedin.com/in/ravi-kumar-manubothu/" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/93ca551c66041878254331edba629763.svg" class="team-social-svg-icon" data-v-a9db5614></a></div></div></div></div>
+    <div class="col-lg-6 col-sm-12 padding-vertical-15"><div class="card" data-v-a9db5614><div class="card-body mn--card-body" data-v-a9db5614><img src="/static/images/associate.jpeg" alt="Arjun Naidu" class="team-card-image rounded-circle" data-v-a9db5614> <h3 class="profile-name" data-v-a9db5614>
+      Arjun Naidu
+    </h3> <h3 class="profile-designation" data-v-a9db5614>
+      Associate
+    </h3>  <div class="team-social-icons mt-auto" data-v-a9db5614>
+    <a href="https://twitter.com/gmnaidu5?s=09" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/02d6313377eee0e8a3686f8d2f457d0b.svg" class="team-social-svg-icon" data-v-a9db5614></a> <!---->
+    <a href="https://www.linkedin.com/in/arjun-naidu-polygar-46761416b/" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/93ca551c66041878254331edba629763.svg" class="team-social-svg-icon" data-v-a9db5614></a></div></div></div></div><div class="col-lg-6 col-sm-12 padding-vertical-15"><div class="card" data-v-a9db5614><div class="card-body mn--card-body" data-v-a9db5614><img src="/static/images/associat.jpeg" alt="Sai Vinod" class="team-card-image rounded-circle" data-v-a9db5614> <h3 class="profile-name" data-v-a9db5614>
+      Sai Vinod
+    </h3> <h3 class="profile-designation" data-v-a9db5614>
+      Associate
+    </h3> <div class="team-social-icons mt-auto" data-v-a9db5614>
+    <a href="#" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/02d6313377eee0e8a3686f8d2f457d0b.svg" class="team-social-svg-icon" data-v-a9db5614></a> <!---->
+    <a href="https://www.linkedin.com/in/sai-vinod/" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/93ca551c66041878254331edba629763.svg" class="team-social-svg-icon" data-v-a9db5614></a> </div></section> <a name="partners"></a><br><br><br>
+<!-- SUBCRIBE -->
+<a name="subscribe"></a> <div class="row justify-content-md-center" data-v-68aadbc0><div class="col-md-10" data-v-68aadbc0><section class="section-utils section-subscribe" data-v-68aadbc0><div class="container" data-v-68aadbc0><h2 class="text-white text-center" data-v-68aadbc0>
+          Subscribe to our Mailing List
+        </h2> <p class="content md-body-text text-white" data-v-68aadbc0>
+          We’ll send you updates about Matic Network
+        </p> <div class="row justify-content-md-center" data-v-68aadbc0><div class="col-md-8 justify-content-md-center" data-v-68aadbc0><form class="mt-4" data-v-68aadbc0><div class="input-container" data-v-68aadbc0><input  placeholder="Enter your email address" type="email" required class="m-input col-md-9" data-v-68aadbc0> <button type="submit" class="m-input pointer submit-btn" data-v-68aadbc0>SUBMIT
+        </button></div></form></div></div><br></div></p></section></div>
+        <hr class="divider-line" data-v-087c8c5f> 
+        <footer class="footer" data-v-61e8342c data-v-087c8c5f><div class="container" data-v-61e8342c><div class="row align-items-start ml-0 mr-0" data-v-61e8342c><div class="col-lg-3 mobile-order-2 mt-4 mb-5" data-v-61e8342c><svg-sprite-icon name="logo" alt="#" class="m-logo" data-v-61e8342c></svg-sprite-icon> <div class="text-white md-body-text opacity-6" data-v-61e8342c><br><br><br>
+         <h4 style="color:white;margin-left: 25%" >Address:</h4>
+         <p style="color:white;margin-left: 25%;">786D 27th Main road 5th cross,
+
+        <br> BTM second stage, <br>
+
+            Bangalore, India.<br>
+
+            Email:support@encryptfund.com
+
+        </p>
+        </div></div><br><br><div style="float:left;margin-left: 25%;left:22%;position:absolute" class="col row" data-v-61e8342c><div class="col-lg-2 col-md-4 col-sm-12 mt-4" data-v-61e8342c><h3 class="text-white" data-v-61e8342c><br><br>Quick Links</h3><ul data-v-61e8342c><li class="footer-item" data-v-61e8342c><a href="#section1" class="footer-link" data-v-61e8342c>About Us</a></li><li class="footer-item" data-v-61e8342c><a href="#section2" class="footer-link" data-v-61e8342c>Why index Investing</a></li><li class="footer-item" data-v-61e8342c><a href="#section4" class="footer-link" data-v-61e8342c>Token Holder Benfits</a></li><li class="footer-item" data-v-61e8342c><a href="#section9" class="footer-link" data-v-61e8342c>Team</a></li></ul></div><div class="col-lg-2 col-md-4 col-sm-12 mt-4" data-v-61e8342c>
+        <h3 class="text-white" data-v-61e8342c><br><br>
+        Community  </h3> <ul data-v-61e8342c><li class="footer-item" data-v-61e8342c><a href="https://.twitter.com/Encrypt89731042" target="_blank" rel="noopener noreferrer" class="footer-link" data-v-61e8342c>
+            <svg-sprite-icon name="logo-twitter" alt="twitter" class="mr-2 footer-svg-icon" data-v-61e8342c><svg data-v-61e8342c="" xmlns="#" class="svg-sprite-icon mr-2 footer-svg-icon"><use xlink:href="/static/images/twitter.png"></use></svg></svg-sprite-icon>
+                twitter
+              </a></li><li class="footer-item" data-v-61e8342c><a href="https://t.me/joinchat/AAAAAE8vpk-Do42uC8Lwdw" target="_blank" rel="noopener noreferrer" class="footer-link" data-v-61e8342c><svg-sprite-icon name="logo-github" alt="github" class="mr-2 footer-svg-icon" data-v-61e8342c>
+            <svg-sprite-icon name="logo-twitter" alt="twitter" class="mr-2 footer-svg-icon" data-v-61e8342c><svg data-v-61e8342c="" xmlns="#" class="svg-sprite-icon mr-2 footer-svg-icon"><use xlink:href="#"></use></svg></svg-sprite-icon>
+                joinchat
+              </a></li><li class="footer-item" data-v-61e8342c><a href="https://medium.com/@Encryptindex" target="_blank" rel="noopener noreferrer" class="footer-link" data-v-61e8342c><svg-sprite-icon name="logo-medium" alt="medium" class="mr-2 footer-svg-icon" data-v-61e8342c>
+            <svg-sprite-icon name="logo-twitter" alt="twitter" class="mr-2 footer-svg-icon" data-v-61e8342c><svg data-v-61e8342c="" xmlns="#" class="svg-sprite-icon mr-2 footer-svg-icon"><use xlink:href="#"></use></svg></svg-sprite-icon>
+                medium
+              </a></li><li class="footer-item" data-v-61e8342c><a href="Support@encryptfund.com" target="_blank" rel="noopener noreferrer" class="footer-link" data-v-61e8342c><svg-sprite-icon name="logo-telegram" alt="telegram" class="mr-2 footer-svg-icon" data-v-61e8342c>
+             <svg-sprite-icon name="logo-twitter" alt="twitter" class="mr-2 footer-svg-icon" data-v-61e8342c><svg data-v-61e8342c="" xmlns="#" class="svg-sprite-icon mr-2 footer-svg-icon"><use xlink:href="#"></use></svg></svg-sprite-icon>
+                Support
+              </a></li><br></ul></div></div></div></div></footer>
+
+<script type="text/javascript">
+    function  hi() {
+        document.getElementById('matter').style.display="block";
+                document.getElementById('more').style.display="none";
+                        document.getElementById('less').style.display="block";
+    }</script>
+
+<script type="text/javascript">
+anychart.onDocumentReady(function() {
+
+  // set the data
+  var data = [
+      {x: "crowd fund tokens", value: 65.0,normal:  {fill: "#CC66FF"}},
+      {x: "Founders and teams", value: 15.0,normal:  {fill: "#9966FF"}},
+      {x: "Marketing", value: 5.0,normal:  {fill: "#9933FF"}},
+      {x: "Advisors", value: 5.0,normal:  {fill: "#CC99FF"}},
+      {x: "Reserve fund of tokens", value: 10.0, normal:  {fill: "#FF99CC"}},
+  ];
+  // create the chart
+  var chart = anychart.pie();
+
+  // set the chart title
+  chart.title("Token sale structure");
+chart.background("#234790");
+  // add the data
+  chart.data(data);
+
+  // display the chart in the container
+  chart.container('container');
+  chart.draw();
+
+});
+</script>
+<script>
+    anychart.onDocumentReady(function() {
+
+  // set the data
+  var data = [
+      {x: "Portfolio Funding", value: 96.0, normal:  {fill: "#CC66FF"}},
+      {x: "Legal Expensive", value: 2.0, normal:  {fill: "#9966FF"}},
+      {x: "Marketing", value: 2.0, normal:  {fill: "#9933FF"}},
+  ];
+  // create the chart
+  var chart = anychart.pie();
+
+  // set the chart title
+  chart.title("Funding allocation structure");
+chart.background("#234790");
+
+  // add the data
+  chart.data(data);
+
+  // display the chart in the container
+  chart.container('second');
+  chart.draw();
+});</script>
+
+<script type="text/javascript">
+    function sub() {
+        alert('You have successfully subscribed')
+    }</script>
+</body>
+</html>
