@@ -6,33 +6,77 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css1.css'%}">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Encrypt Fund</title>
     <style>
-        nav{
-            
-            background-color:#191970 ;
+        /*#preloader*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(175deg, #016eba 0%, #67009d 100%);
+  /* change if the mask should have another color then white */
+  z-index: 9999;
+  /* makes sure it stays on top */
+}
+
+#preloader .pre-s{
+    width: 75px;
+    height: 75px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#preloader .spinner{
+    width: 75px;
+    height: 75px;
     margin: 0;
+    border-top: 10px solid #46bdf4;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.12) inset;
+    border-right: 10px solid transparent;
+    border-radius: 50%;
+    animation: 1.5s spin linear infinite;
+}
+#preloader .spinner-2{
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    border-top: 10px solid #67009d;
+    border-left: 10px solid transparent;
+    border-radius: 50%;
+    position: absolute;
     top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    height: 62px;
-    text-align: center;
-    padding-top: 9px;
-        }
+    animation: 1.5s spin-2 linear infinite;
+}
+@keyframes spin{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+@keyframes spin-2{
+    from{ transform: rotate(360deg); }
+    to{ transform: rotate(0deg); }
+}
+
+      
 
           footer{
 
             display: block;
             padding: 8px 18px;
-            margin: 0;
+            /* margin: 0; */
               bottom:0;
             left:0;
             width:100%;
             height: 440px;
+            margin-bottom: -9px;
+
 
         }
 
@@ -47,13 +91,13 @@
         }
 
         #bd{
-
+            background: url("static/dot2.jpg");
             background-color: #191970;
-            background-size:100%;
             color:white;
-
-            /*background-image:url('/static/ai.png');*/
-
+            height: 801px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
         }
 
         #Logo, #img1, #img2,#img3, #img4{
@@ -300,8 +344,45 @@
 
 }
 
-@media only screen and (max-width: 767px) {
+#menu1{
+    margin-left: 299px;
+}
+#menu2{
+    margin-left: 38px;
+}
+#menu3{
+    margin-left: 38px;
+}
+#menu4{
+    margin-left: 38px;
+}
+#menu5{
+    margin-left: 38px;
+}
+#menu6{
+    margin-left: 38px;
+}
+.ftr111{
+    float:left;
+    margin-left: 25%;
+    left:22%;
+    position:absolute;
+    
 
+}
+
+@media only screen and (max-width: 767px) {
+    /*.adr{
+        margin-left: 10px;
+    }*/
+.ftr111{
+    float:left;
+    margin-left: 0%;
+    left:0%;
+    position:absolute;
+    margin-top: 323px;
+    background-color: #0a1647;
+}
     .timeline-list:before {
 
         left: 5px;
@@ -390,7 +471,22 @@
         width: 60%;
 
     }
+#menu1{
+    margin-left: 38px;
+}
+team-circle-des {
 
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .team-circle-des img {
+
+        max-width: 100%;
+
+    }
 }
 
 .team-circle-des {
@@ -464,24 +560,6 @@
 
 }*/
 
-@media only screen and (max-width: 767px) {
-
-    .team-circle-des {
-
-        max-width: 360px;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    .team-circle-des img {
-
-        max-width: 100%;
-
-    }
-
-}
-
     .timeline-list:before{
 
     position: absolute;
@@ -497,25 +575,229 @@
 
         color :white;
     }
+.thbimage{
+    margin-top: 28px;
+    width: 30%;
+    margin: 0 auto;
+    transition: transform .5s;
+}
 
+.thbimage:hover{
+    transform: scale(1.3);
+}
+nav{
+    background-color:#191970 ;
+}
+.collapse{
+    background-color: #191970;
+    margin-left: -16px;
+    padding-left: 19px;
+    margin-right: -15px;
+}
+
+#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color:blue;
+}
+
+#boxes #dialog {
+  width: 750px;
+  height: 328px;
+  padding: 10px;
+  background-color: dodgerblue;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 15pt;
+}
+
+#popupfoot {
+  font-size: 16pt;
+  position: absolute;
+  bottom: -28px;
+  width: 380px;
+  left: 180px;
+  color: pink;
+}
+.close{
+    margin-top: -44px;
+}
+ul li{
+    list-style: none;
+    float: left;
+}
+.imggg{
+    width: 85%;
+    padding: 7px;
+    border: 1px solid #f8f9fa;
+    border-radius: 0%;
+    background-color: #281E3D;
+    }
+    .imggg1{
+    width: 85%;
+    height: 71px;
+    padding: 7px;
+    border: 1px solid #f8f9fa;
+    border-radius: 0%;
+    background-color: #281E3D;
+    }
+
+ .btn{
+     background-color: purple;
+     color: white;
+     margin-top: 12px;
+ }
 </style>
 
 </head>
-
 <body id="bd">
 
-<nav>
-    <a id="meanu" href=" " style="font-size: 25px;color:white;cursor:pointer;"><b><u> Encrypt Fund</u></b></a>
-    <a id="menu1" href="#section1" style="margin-left: 20%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px">About us </a>
-    <a  id="menu2" href="#section2" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px"> Why Index Investing</a>
-    <a id="menu3"  href="#section4" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px">Token Holder Benefits</a>
-    <a id="menu4"  href="#section5" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px"> Token sale</a>
-    <a id="menu5" href="#section7" style="margin-left: 2%;text-decoration:none;cursor:pointer;padding:15px 15px;border-radius:8px 8px"> Road map</a>
-     <a id="menu6" href="#section9" style="margin-left: 2%;text-decoration:none;cursor:pointer;border-radius:8px 8px"> Team</a>
+
+       
+<script>
+
+              $(document).ready(function() {	
+
+                var id = '#dialog';
+                    
+                //Get the screen height and width
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+                    
+                //Set heigth and width to mask to fill up the whole screen
+                $('#mask').css({'width':maskWidth,'height':maskHeight});
+                
+                //transition effect
+                $('#mask').fadeIn(500);	
+                $('#mask').fadeTo("slow",0.9);	
+                    
+                //Get the window height and width
+                var winH = $(window).height();
+                var winW = $(window).width();
+                              
+                //Set the popup window to center
+                $(id).css('top',  winH/2-$(id).height()/2);
+                $(id).css('left', winW/2-$(id).width()/2);
+                    
+                //transition effect
+                $(id).fadeIn(2000); 	
+                    
+                //if close button is clicked
+                $('.window .close').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+                
+                $('#mask').hide();
+                $('.window').hide();
+                });
+                
+                //if mask is clicked
+                $('#mmm').click(function () {
+                $(this).hide();
+                $('#mask').hide();
+                $('.window').hide();
+                });
+                    
+                });
+
+            </script>
+ <script> 
+        var deadline = new Date("Sep 30, 2019 15:37:25").getTime(); 
+        var x = setInterval(function() { 
+        var now = new Date().getTime(); 
+        var t = deadline - now; 
+        var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+        var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+        document.getElementById("demo").innerHTML = days + "D "  
+        + hours + "H " + minutes + "M " + seconds + "S "; 
+            if (t < 0) { 
+                clearInterval(x); 
+                document.getElementById("demo").innerHTML = "EXPIRED"; 
+            } 
+        }, 1000); 
+        </script> 
+ <div id="boxes">
+        <div id="dialog" class="window"><h2>We will start NIX token Sale on IEO launchpad</h2><a href="#" class="close agree"><i class="fa fa-close" style="font-size:24px"></i></a><br>
+            <h3 style="color:darkmagenta">30 SEP 2019</h3>
+            <p style="color:white" id="demo"></p> 
+          <div id="popupfoot">
+
+<div style="width:100%;">
+
+    <div style="width:50%;float:left;">
+            <a href="https://www.coinbene.com/" target="blank"><img class="imggg" src="static/coinb.png"></a>
+    </div>
+
+    <div style="width:50%;float:left;">
+            <a href="https://www.kucoin.com/" target="blank"><img class="imggg1" src="static/KuCoin.png"></a>
+     </div>
+
+</div>
+
+       
+                <ul>
+        <li><a style="color:darkturquoise;margin-left: -30px;" href="https://www.coinbene.com/" target="blank">coinbene.com</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a style="color:darkturquoise;" href="https://www.kucoin.com/" target="blank">kucoin.com</a></li>
+        </ul>
+         <button id="mmm" class="btn">Okay</button><br><br>
+        </div>
+        
+        </div>
+        <div id="mask"></div>
+ </div>
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand" href=" "><img src="static/newlogo.png" width="145px" height="45px" alt=""></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" id="menu1" href="#section1" >About us </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="menu2" href="#section2"> Why Index Investing</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="menu3"  href="#section4">Token Holder Benefits</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="menu4"  href="#section5"> Token sale</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="menu5" href="#section7"> Road map</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="menu6" href="#section9"> Team</a>
+    </li>
+ </ul>
+</div>
 
 </nav>
 
-<section id="section1" style="background-image: url('/static/homepage design2.jpg');background-repeat: no-repeat;background-size: 1517px 738px;
+
+
+<section id="section1" style="background-image: url('/static/homepage design2.jpg');background-repeat: no-repeat;background-size: 100% 100%;
     margin-top: 62px;"><br><br><br><br><br><br><br><br><br><br><br>
     <p id="content1"><br>
 
@@ -525,20 +807,40 @@
     <p style="text-align: center;font-size: 110%;">Outperform the market by holding the top crypto coins with a single token - NIX<br><br><br>
     <a href="#" id="whp" style="text-decoration: none;cursor:pointer;padding:15px 15px;border-radius:8px 8px;color:white;">Whitepaper</a> <a href="#" id="hw" style="text-decoration: none;cursor:pointer;color:white;border-radius:8px 8px;padding:15px 15px;margin-left: 5%;">How it works?</a></p>
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 </section>
 
 <section id="section2" class="m-bg-white section-theme">
 <div class="container"><div class="row align-items-center"><div class="col-lg-6 img-container"><img src="/static/images/index1.jpg" style="width: 142%; height: 421px;margin-left: -205px;
-    margin-top: 111px;" alt="Index Investing" ><br></div> <div class="col-lg-6"><div class="section-text-content"><br><br><br><h2><b>Why Index Investing?</h2></b><div class="md-body-text margin-top"><p>
-        
+    margin-top: 75px;" alt="Index Investing" ><br></div> <div class="col-lg-6"><div class="section-text-content" style="margin-left: 32px;"><br><br><br><h2><b>Why Index Investing?</h2></b><div class="md-body-text margin-top"><p>
+       <style>
+#more {display: none;}
+</style> 
         In traditional financial markets, an index is comprised of a portfolio of assets which represents the statistical change of the measured market.An index can be derived from a number of parameters such as price, marketcap, and past performance. Examples of well-know stock indexes include Standard & Poor's 500 Index (S &P500). Although cryptocurrencies and digital assetsare relatively new asset classes, the industry acknowledges the need for crypto protfolio management products and solutions. Within just the past few years, there has been rapid growth.of crypto index fund offerings. 
         <br><br>
-        Crypto index funds provide exposure to an extremely new and volatile asset  class while also spreading that risk across. a protfolio of different
+        <span id="dots">...</span><span id="more">Crypto index funds provide exposure to an extremely new and volatile asset  class while also spreading that risk across. a protfolio of different
         cryptocurrencies.This becomes particularly attractive to traditional investors, who are generally put off and discouraged from the comparatively risky crypto markets.As a result, we're seeing a huge influx of crypto index products being created.
-    <!-- </span><a id="less" onclick="bye()" style="display: none;margin-left:45%;margin-right:45%;cursor:pointer;padding:15px 15px;border-radius:8px 8px;">less </a>
- -->
-    </p></div></div></div></div></div></div><br><br>
+        </span></p>
+<button type='button' style="margin-left: 217px;" class="btn btn-info" onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+</div></div></div></div></div><br><br>
 </section><br><br><br><br>
 
 <section id="section3"><br><br>
@@ -555,12 +857,12 @@
 
 <div class="container">
   <div class="row" style="margin-top: -56px;">
-    <div class="col-sm-6" style="left: -35px;"><img style="margin-top: 28px;width: 30%;" src="/static/diversification.png"></div>
-    <div class="col-sm-6"><img style="margin-top: 28px;width: 30%;" src="/static/market exposure.png"></div>
+    <div class="col-sm-6" style="left: -35px;"><img class="thbimage" src="/static/diversification.png"></div>
+    <div class="col-sm-6"><img class="thbimage" src="/static/market exposure.png"></div>
   </div>
 </div>
 
-<div class="container" style="margin-top: -33px;">
+<div class="container" style="margin-top: -25px;">
   <div class="row" style="margin-top: 20px;">
     <div class="col-sm-6" id="b1" style="left: -35px;"><br>
             <h2 style="color:white;text-align:center;font-size: 26px;">Diversification</h2><br>
@@ -570,7 +872,7 @@
             </div>
     <div class="col-sm-6" id="b2"><br>
     <h2 style="color:white;text-align: center;font-size: 26px;">Market Exposure</h2><br>
-    <p style="color:white;">NIX is aim to deliver the performance of the crypto currency market.</p>
+    <p style="color:white;">NIX  aims to deliver the top  performance of the crypto currency market . We keep track the capitalization of coin market cap and we select best  cryptocurrencies to  portfolio based  on which has highest weighted cap.</p>
 </div>
   </div>
 </div>
@@ -578,12 +880,12 @@
 
 <div class="container" style="margin-top: 20px;" >
   <div class="row">
-    <div class="col-sm-6" style="left: -35px;"><img style="margin-top: 28px;width: 30%;" src="/static/transparency.png"></div>
-    <div class="col-sm-6"><img style="margin-top: 28px;width: 30%;" src="/static/accountability .png"></div>
+    <div class="col-sm-6" style="left: -35px;"><img class="thbimage" src="/static/transparency.png"></div>
+    <div class="col-sm-6"><img class="thbimage" src="/static/accountability .png"></div>
   </div>
 </div>
 
-<div class="container" style="margin-top: -33px;">
+<div class="container" style="margin-top: -25px;">
   <div class="row" style="margin-top: 20px;" >
     <div class="col-sm-6" id="b3" style="left: -35px;"><br>
     <h2 style="color:white;text-align: center;font-size: 26px;">Transparency</h2><br>
@@ -621,21 +923,102 @@
             </p>
             <br></p>
 
-    <center><h4 style="color:black;text-align:center"> Token distribution and fund allocations </h4></center><br><br>
-    <img src="{%  static 'images/15.JPG' %} " style="margin-left: 8%">
-    <img src="{%  static 'images/16.JPG' %} " style="margin-left:8%"></div><br><br>
+   <center><h4 style="color:black;text-align:center;font-size: 24px;"> Token distribution and fund allocations </h4></center><br><br>
+   
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
-</section><br>
+      
+      google.charts.load('current', {'packages':['corechart']});
+
+      
+      google.charts.setOnLoadCallback(drawtotaldistribution);
+
+      google.charts.setOnLoadCallback(drawFundallocation);
+
+     
+      function drawtotaldistribution() {
+
+    
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Crowd Fund token', 65],
+          ['Founders & Team', 15],
+          ['Advicers', 5],
+          ['Marketing', 5],
+          ['Reserve fund of Tokens', 10]
+        ]);
+
+        
+        var options = {title:'Token Distribution',
+                       pieHole: 0.5,
+                       pieSliceText: "none",
+                       width:650,
+                       height:400,
+                       };
+
+        
+        var chart = new google.visualization.PieChart(document.getElementById('totaldistribution_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function drawFundallocation() {
+
+       
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Portfolio Funding', 96],
+          ['Legal Expensive', 2],
+          ['Marketing', 2],
+        ]);
+
+    
+        var options = {title:' ',
+                       pieHole: 0.5,
+                       pieSliceText: "none",
+                       width:650,
+                       height:400};
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('Fundallocation_chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <center><table class="columns" style="margin-left:-10%">
+      <tr>
+        <td><div id="totaldistribution_chart_div" style="border: 0px  solid #ccc"></div></td>
+        <td><div id="Fundallocation_chart_div" style="border: 0px solid #ccc; margin-right:20em"></div></td>
+      </tr>
+    </table></center>
+
+</div><br><br>
+
+
+</section>
+
 
 <section id="section6" class="m-bg-light section-theme"><div class="container section-text-content"><h2 class="text-center" style="color: black ">
      <b> Partners</b>
-    </h2> <div class="row mt-55"><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1><!-- <img src="#" alt="#" class="partner-icon" data-v-64307df1> --></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">Asian Decentralized</h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1 style="color: black">
+    </h2> <div class="row mt-55"><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">Asian Decentralized</h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1 style="color: black">
         <b>The New Era of Blockchain Revolution</b><br> Drawing thousands of the world's blockchain leaders together to learn and do business,Through conversations between different countries’ industries, capitalists, startups, and governments,  Asian Decentralzed brings you deep discussions and analysis, leading people to understand the ongoing blockchain revolution in the world
-      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1><!-- <img src="#" alt="#" class="partner-icon" data-v-64307df1> --></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">ABC</h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1>
+      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">ABC</h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1>
         Asian Blockchain Council connects global blockchain experts ,tech players in the space including emerging startups - with regional businesses , govt authorities , IT leaders , tech entrepreneurs , investors and blockchain developers<br><br> It features enterprise use cases , govt use cases , keynotes , panel discussions , tech- talks , exhibitions , pitches and opportunities
-      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1><!-- <img src="#" alt="#" class="partner-icon" data-v-64307df1> --></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">Tokenization Expo </h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1>
+      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div><div class="col-lg-4 col-md-6 col-sm-12 mt-30"><div class="card" data-v-64307df1><div class="card-body mn--card-body" data-v-64307df1><div class="col-md-3 logo-container" data-v-64307df1></div> <div class="content" data-v-64307df1><h3 data-v-64307df1 style="color: black">Tokenization Expo </h3> <p class="md-body-text my-2 mb-4 opacity-6" data-v-64307df1>
         TokenizationExpo Empowers  the  world Tokenized industry provides a platform  to the angel investors and Venture capitalists  Access to invest in early  Regulated Security Token offerings  and  Blockchain startups   Join With the Next Biggest Tokenized Revolution 
-      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a></div></div></div></div></div></div></div></section>  
+      </p> <div class="mt-md-auto text-center" data-v-64307df1><a href="#" target="_blank" rel="noopener noreferrer" role="button" class="m-btn-link" data-v-64307df1></a>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>  
 
 <section id="section7"><br><br><br><br>
     <div class="container" >
@@ -784,7 +1167,8 @@
                 </div>
             </div>
         </div>
-
+</div>
+</section>
     </div><br><br>
 <section id="section8"><br><br><br>
 
@@ -830,7 +1214,16 @@
         </p> <div class="row justify-content-md-center" data-v-68aadbc0><div class="col-md-8 justify-content-md-center" data-v-68aadbc0><form class="mt-4" data-v-68aadbc0><div class="input-container" data-v-68aadbc0><input  placeholder="Enter your email address" type="email" required class="m-input col-md-9" data-v-68aadbc0> <button type="submit" class="m-input pointer submit-btn" data-v-68aadbc0>SUBMIT
         </button></div></form></div></div><br></div></p></section></div>
         <hr class="divider-line" data-v-087c8c5f> 
-        <footer class="footer" data-v-61e8342c data-v-087c8c5f><div class="container" data-v-61e8342c><div class="row align-items-start ml-0 mr-0" data-v-61e8342c><div class="col-lg-3 mobile-order-2 mt-4 mb-5" data-v-61e8342c><svg-sprite-icon name="logo" alt="#" class="m-logo" data-v-61e8342c></svg-sprite-icon> <div class="text-white md-body-text opacity-6" data-v-61e8342c><br><br><br>
+
+        <footer class="footer" data-v-61e8342c data-v-087c8c5f>
+
+            <div class="container" data-v-61e8342c>
+                <div class="row align-items-start ml-0 mr-0" data-v-61e8342c>
+
+
+                    <div class="col-lg-3 mobile-order-2 mt-4 mb-5" data-v-61e8342c>
+                        <svg-sprite-icon name="logo" alt="#" class="m-logo" data-v-61e8342c></svg-sprite-icon> 
+                        <div class="text-white adr md-body-text opacity-6" data-v-61e8342c><br><br><br>
          <h4 style="color:white;margin-left: 25%" >Address:</h4>
          <p style="color:white;margin-left: 25%;">786D 27th Main road 5th cross,
 
@@ -841,7 +1234,21 @@
             Email:support@encryptfund.com
 
         </p>
-        </div></div><br><br><div style="float:left;margin-left: 25%;left:22%;position:absolute" class="col row" data-v-61e8342c><div class="col-lg-2 col-md-4 col-sm-12 mt-4" data-v-61e8342c><h3 class="text-white" data-v-61e8342c><br><br>Quick Links</h3><ul data-v-61e8342c><li class="footer-item" data-v-61e8342c><a href="#section1" class="footer-link" data-v-61e8342c>About Us</a></li><li class="footer-item" data-v-61e8342c><a href="#section2" class="footer-link" data-v-61e8342c>Why index Investing</a></li><li class="footer-item" data-v-61e8342c><a href="#section4" class="footer-link" data-v-61e8342c>Token Holder Benfits</a></li><li class="footer-item" data-v-61e8342c><a href="#section9" class="footer-link" data-v-61e8342c>Team</a></li></ul></div><div class="col-lg-2 col-md-4 col-sm-12 mt-4" data-v-61e8342c>
+        </div>
+    </div>
+
+    <br><br>
+
+
+
+    <div class="col row ftr111" data-v-61e8342c>
+        
+
+        <div class="col-lg-2 col-md-4 col-sm-12 mt-4" data-v-61e8342c><h3 class="text-white" data-v-61e8342c><br><br>Quick Links</h3><ul data-v-61e8342c><li class="footer-item" data-v-61e8342c><a href="#section1" class="footer-link" data-v-61e8342c>About Us</a></li><li class="footer-item" data-v-61e8342c><a href="#section2" class="footer-link" data-v-61e8342c>Why index Investing</a></li><li class="footer-item" data-v-61e8342c><a href="#section4" class="footer-link" data-v-61e8342c>Token Holder Benfits</a></li><li class="footer-item" data-v-61e8342c><a href="#section9" class="footer-link" data-v-61e8342c>Team</a></li></ul>
+        </div>
+
+
+        <div class="col-lg-2 col-md-4 col-sm-12 mt-4" data-v-61e8342c>
         <h3 class="text-white" data-v-61e8342c><br><br>
         Community  </h3> <ul data-v-61e8342c><li class="footer-item" data-v-61e8342c><a href="https://.twitter.com/Encrypt89731042" target="_blank" rel="noopener noreferrer" class="footer-link" data-v-61e8342c>
             <svg-sprite-icon name="logo-twitter" alt="twitter" class="mr-2 footer-svg-icon" data-v-61e8342c><svg data-v-61e8342c="" xmlns="#" class="svg-sprite-icon mr-2 footer-svg-icon"><use xlink:href="/static/images/twitter.png"></use></svg></svg-sprite-icon>
@@ -855,8 +1262,17 @@
               </a></li><li class="footer-item" data-v-61e8342c><a href="Support@encryptfund.com" target="_blank" rel="noopener noreferrer" class="footer-link" data-v-61e8342c><svg-sprite-icon name="logo-telegram" alt="telegram" class="mr-2 footer-svg-icon" data-v-61e8342c>
              <svg-sprite-icon name="logo-twitter" alt="twitter" class="mr-2 footer-svg-icon" data-v-61e8342c><svg data-v-61e8342c="" xmlns="#" class="svg-sprite-icon mr-2 footer-svg-icon"><use xlink:href="#"></use></svg></svg-sprite-icon>
                 Support
-              </a></li><br></ul></div></div></div></div></footer>
+              </a></li><br></ul>
+          </div>
 
+
+        </div>
+
+
+        </div>
+      
+          </footer>
+  
 <script type="text/javascript">
     function  hi() {
         document.getElementById('matter').style.display="block";
