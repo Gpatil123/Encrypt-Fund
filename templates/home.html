@@ -663,6 +663,22 @@ ul li{
      color: white;
      margin-top: 12px;
  }
+ .indexbg{
+    background: url("static/indexbg.jpg");
+            background-color: #191970;
+            color:white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+ }
+
+ #salebg{
+    background: url("static/indexbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+ }
 </style>
 
 </head>
@@ -696,7 +712,7 @@ ul li{
                 $(id).css('left', winW/2-$(id).width()/2);
                     
                 //transition effect
-                $(id).fadeIn(2000); 	
+                $(id).fadeIn(1000); 	
                     
                 //if close button is clicked
                 $('.window .close').click(function (e) {
@@ -811,7 +827,7 @@ ul li{
 </section>
 
 <section id="section2" class="m-bg-white section-theme">
-<div class="container"><div class="row align-items-center"><div class="col-lg-6 img-container"><img src="/static/images/index1.jpg" style="width: 142%; height: 421px;margin-left: -205px;
+<div class="container"><div class="row align-items-center"><div class="col-lg-6 img-container"><img src="/static/BlockChain.png" style="width: 142%; height: 421px;margin-left: -205px;
     margin-top: 75px;" alt="Index Investing" ><br></div> <div class="col-lg-6"><div class="section-text-content" style="margin-left: 32px;"><br><br><br><h2><b>Why Index Investing?</h2></b><div class="md-body-text margin-top"><p>
        <style>
 #more {display: none;}
@@ -952,11 +968,13 @@ function myFunction() {
         ]);
 
         
-        var options = {title:'Token Distribution',
+        var options = {title:'',
+                       colors: ['#194553', '#225e71','#2b778f','#3490ad','#6fbcd4'],
                        pieHole: 0.5,
                        pieSliceText: "none",
                        width:650,
                        height:400,
+                       backgroundColor: 'transparent',
                        };
 
         
@@ -978,9 +996,11 @@ function myFunction() {
 
     
         var options = {title:' ',
+                       colors: ['#194553','#3490ad','#6fbcd4'],
                        pieHole: 0.5,
                        pieSliceText: "none",
                        width:650,
+                       backgroundColor: 'transparent',
                        height:400};
 
 
@@ -1205,14 +1225,35 @@ function myFunction() {
       Associate
     </h3> <div class="team-social-icons mt-auto" data-v-a9db5614>
     <a href="#" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/02d6313377eee0e8a3686f8d2f457d0b.svg" class="team-social-svg-icon" data-v-a9db5614></a> <!---->
-    <a href="https://www.linkedin.com/in/sai-vinod/" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/93ca551c66041878254331edba629763.svg" class="team-social-svg-icon" data-v-a9db5614></a> </div></section> <a name="partners"></a><br><br><br>
+    <a href="https://www.linkedin.com/in/sai-vinod/" target="_blank" rel="noopener noreferrer" data-v-a9db5614><img src="/static/images/93ca551c66041878254331edba629763.svg" class="team-social-svg-icon" data-v-a9db5614></a> </div></section> <a name="partners"></a>
 <!-- SUBCRIBE -->
-<a name="subscribe"></a> <div class="row justify-content-md-center" data-v-68aadbc0><div class="col-md-10" data-v-68aadbc0><section class="section-utils section-subscribe" data-v-68aadbc0><div class="container" data-v-68aadbc0><h2 class="text-white text-center" data-v-68aadbc0>
+<a name="subscribe"></a> 
+<div class="row justify-content-md-center" data-v-68aadbc0>
+    <div class="col-md-10" data-v-68aadbc0>
+        <section class="section-utils" data-v-68aadbc0>
+        <div class="container" data-v-68aadbc0>
+            <h2 class="text-white text-center" data-v-68aadbc0>
           Subscribe to our Mailing List
-        </h2> <p class="content md-body-text text-white" data-v-68aadbc0>
+        </h2> 
+        <p class="content md-body-text text-white" data-v-68aadbc0>
           We’ll send you updates about Matic Network
-        </p> <div class="row justify-content-md-center" data-v-68aadbc0><div class="col-md-8 justify-content-md-center" data-v-68aadbc0><form class="mt-4" data-v-68aadbc0><div class="input-container" data-v-68aadbc0><input  placeholder="Enter your email address" type="email" required class="m-input col-md-9" data-v-68aadbc0> <button type="submit" class="m-input pointer submit-btn" data-v-68aadbc0>SUBMIT
-        </button></div></form></div></div><br></div></p></section></div>
+        </p> 
+        <div class="row justify-content-md-center" data-v-68aadbc0>
+            <div class="col-md-8 justify-content-md-center" data-v-68aadbc0>
+                <form class="mt-4" data-v-68aadbc0>
+                    <div class="input-container" data-v-68aadbc0>
+                        <input  placeholder="Enter your email address" type="email" required class="m-input col-md-9" data-v-68aadbc0> 
+                        <button type="submit" class="m-input pointer submit-btn" data-v-68aadbc0>SUBMIT
+        </button>
+    </div>
+</form>
+</div>
+</div>
+<br>
+</div>
+</p>
+</section>
+</div>
         <hr class="divider-line" data-v-087c8c5f> 
 
         <footer class="footer" data-v-61e8342c data-v-087c8c5f>
